@@ -6,7 +6,7 @@ _base_ = [
     '../_base_/default_runtime.py'
 ]
 
-pretrained = 'pretrained/vrwkv_base_in1k_224.pth'
+pretrained = 'pretrained/vrwkv_b_in1k_224.pth'
 model = dict(
     backbone=dict(
         _delete_=True,

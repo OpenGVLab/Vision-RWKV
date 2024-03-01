@@ -15,6 +15,6 @@ Code and models shall be available.
 
 | Model | #Param | FLOPs | Top 1-Acc | Download |
 |:------------------------------------------------------------------:|:-------------:|:----------:|:----------:|:----------:|
-| [VRWKV-T](https://huggingface.co/duanyuchen/vrwkv_tiny)    |      6.2M       |   1.2G   | 75.1  | [ckpt](https://huggingface.co/duanyuchen/vrwkv_tiny/resolve/main/vrwkv_tiny_in1k_224.pth) \| [cfg](classification/configs/vrwkv/vrwkv_tiny_8xb128_in1k.py) |
-| [VRWKV-S](https://huggingface.co/duanyuchen/vrwkv_small)    |     23.8M       |   4.6G   | 80.1  | [ckpt](https://huggingface.co/duanyuchen/vrwkv_small/resolve/main/vrwkv_small_in1k_224.pth) \| [cfg](classification/configs/vrwkv/vrwkv_small_8xb128_in1k.py) |
-| [VRWKV-B](https://huggingface.co/duanyuchen/vrwkv_base)    |     93.7M       |  18.2G   | 82.0  | [ckpt](https://huggingface.co/duanyuchen/vrwkv_base/resolve/main/vrwkv_base_in1k_224.pth) \| [cfg](classification/configs/vrwkv/vrwkv_base_16xb64_in1k.py) |
+| [VRWKV-T](https://huggingface.co/OpenGVLab/vrwkv_t)    |      6.2M       |   1.2G   | 75.1  | [ckpt](https://huggingface.co/OpenGVLab/vrwkv_t/resolve/main/vrwkv_t_in1k_224.pth) \| [cfg](classification/configs/vrwkv/vrwkv_tiny_8xb128_in1k.py) |
+| [VRWKV-S](https://huggingface.co/OpenGVLab/vrwkv_s)    |     23.8M       |   4.6G   | 80.1  | [ckpt](https://huggingface.co/OpenGVLab/vrwkv_s/resolve/main/vrwkv_s_in1k_224.pth) \| [cfg](classification/configs/vrwkv/vrwkv_small_8xb128_in1k.py) |
+| [VRWKV-B](https://huggingface.co/OpenGVLab/vrwkv_b)    |     93.7M       |  18.2G   | 82.0  | [ckpt](https://huggingface.co/OpenGVLab/vrwkv_s/resolve/main/vrwkv_b_in1k_224.pth) \| [cfg](classification/configs/vrwkv/vrwkv_base_16xb64_in1k.py) |

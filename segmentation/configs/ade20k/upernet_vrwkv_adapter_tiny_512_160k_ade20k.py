@@ -6,7 +6,7 @@ _base_ = [
     '../_base_/schedules/schedule_160k.py'
 ]
 
-pretrained = 'pretrained/vrwkv_tiny_in1k_224.pth'
+pretrained = 'pretrained/vrwkv_t_in1k_224.pth'
 model = dict(
     pretrained=pretrained,
     backbone=dict(
