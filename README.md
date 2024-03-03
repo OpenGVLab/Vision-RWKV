@@ -11,32 +11,38 @@ Code and models shall be available.
 </div>
 
 ## Released Models
-- Classification(ImageNet-1K)
 
-|  Model  |   Size   | #Param | FLOPs | Top 1-Acc |       Download       |
-|:-------:|:--------:|:------:|:-----:|:---------:|:--------------------:|
-| VRWKV-T |  $224^2$ |   6.2M |  1.2G |    75.1   | [ckpt](https://huggingface.co/OpenGVLab/Vision-RWKV/resolve/main/vrwkv_t_in1k_224.pth) \| [cfg](Vision-RWKV/classification/configs/vrwkv/vrwkv_tiny_8xb128_in1k.py)  |
-| VRWKV-S |  $224^2$ |  23.8M |  4.6G |    80.1   | [ckpt](https://huggingface.co/OpenGVLab/Vision-RWKV/resolve/main/vrwkv_s_in1k_224.pth) \| [cfg](Vision-RWKV/classification/configs/vrwkv/vrwkv_small_8xb128_in1k.py) |
-| VRWKV-B |  $224^2$ |  93.7M | 18.2G |    82.0   | [ckpt](https://huggingface.co/OpenGVLab/Vision-RWKV/resolve/main/vrwkv_b_in1k_224.pth) \| [cfg](Vision-RWKV/classification/configs/vrwkv/vrwkv_base_16xb64_in1k.py)  |
-| VRWKV-L |  $384^2$ | 334.9M | 189.5G |    85.3   | todo |
+### Image Classification (ImageNet-1K)
 
-- Detection(COCO)
+|  Model  |   Size   | #Param | #FLOPs | Top-1 Acc |       Download       |
+| ------- | -------- | ------ | ----- | --------- | -------------------- |
+| VRWKV-T |  224 |   6.2M |  1.2G |    75.1   | [ckpt](https://huggingface.co/OpenGVLab/Vision-RWKV/resolve/main/vrwkv_t_in1k_224.pth) \| [cfg](classification/configs/vrwkv/vrwkv_tiny_8xb128_in1k.py)  |
+| VRWKV-S |  224 |  23.8M |  4.6G |    80.1   | [ckpt](https://huggingface.co/OpenGVLab/Vision-RWKV/resolve/main/vrwkv_s_in1k_224.pth) \| [cfg](classification/configs/vrwkv/vrwkv_small_8xb128_in1k.py) |
+| VRWKV-B |  224 |  93.7M | 18.2G |    82.0   | [ckpt](https://huggingface.co/OpenGVLab/Vision-RWKV/resolve/main/vrwkv_b_in1k_224.pth) \| [cfg](classification/configs/vrwkv/vrwkv_base_16xb64_in1k.py)  |
+| VRWKV-L |  384 | 334.9M | 189.5G |    85.3   | TODO |
 
-|  Model  | \#Param ${^\star}$ | FLOPs ${^\star}$ | ${\rm AP^b}$ | ${\rm AP^m}$ |       Download       |
-|:-------:|:------------------:|:----------------:|:------------:|:------------:|:--------------------:|
-| VRWKV-T |        8.4M        |       67.9G      |     41.7     |     38.0     |  [ckpt](https://huggingface.co/OpenGVLab/Vision-RWKV/resolve/main/mask_rcnn_vrwkv_adapter_tiny_fpn_1x_coco.pth) \| [cfg](Vision-RWKV/detection/configs/mask_rcnn/mask_rcnn_vrwkv_adapter_tiny_fpn_1x_coco.py) |
-| VRWKV-S |       29.3M        |      189.9G      |     44.8     |     40.2     |  [ckpt](https://huggingface.co/OpenGVLab/Vision-RWKV/resolve/main/mask_rcnn_vrwkv_adapter_small_fpn_1x_coco.pth) \| [cfg](Vision-RWKV/detection/configs/mask_rcnn/mask_rcnn_vrwkv_adapter_small_fpn_1x_coco.py) |
-| VRWKV-B |      106.6M        |      599.0G      |     46.8     |     41.7     |  [ckpt](https://huggingface.co/OpenGVLab/Vision-RWKV/resolve/main/mask_rcnn_vrwkv_adapter_base_fpn_1x_coco.pth) \| [cfg](Vision-RWKV/detection/configs/mask_rcnn/mask_rcnn_vrwkv_adapter_base_fpn_1x_coco.py) |
-| VRWKV-L |      351.9M        |     1730.6G      |     50.6     |     44.9     | todo |
+### Object Detection (COCO)
 
-- Segmentation(ADE20K)
+|  Model  | ##Param | #FLOPs | box AP | mask AP |       Download       |
+| ------- | ------------------ | ---------------- | ------------ | ------------ | -------------------- |
+| VRWKV-T |        8.4M        |       67.9G      |     41.7     |     38.0     |  [ckpt](https://huggingface.co/OpenGVLab/Vision-RWKV/resolve/main/mask_rcnn_vrwkv_adapter_tiny_fpn_1x_coco.pth) \| [cfg](detection/configs/mask_rcnn/mask_rcnn_vrwkv_adapter_tiny_fpn_1x_coco.py) |
+| VRWKV-S |       29.3M        |      189.9G      |     44.8     |     40.2     |  [ckpt](https://huggingface.co/OpenGVLab/Vision-RWKV/resolve/main/mask_rcnn_vrwkv_adapter_small_fpn_1x_coco.pth) \| [cfg](detection/configs/mask_rcnn/mask_rcnn_vrwkv_adapter_small_fpn_1x_coco.py) |
+| VRWKV-B |      106.6M        |      599.0G      |     46.8     |     41.7     |  [ckpt](https://huggingface.co/OpenGVLab/Vision-RWKV/resolve/main/mask_rcnn_vrwkv_adapter_base_fpn_1x_coco.pth) \| [cfg](detection/configs/mask_rcnn/mask_rcnn_vrwkv_adapter_base_fpn_1x_coco.py) |
+| VRWKV-L |      351.9M        |     1730.6G      |     50.6     |     44.9     | TODO |
 
-|  Model  | \#Param ${^\star}$ | FLOPs ${^\star}$ |   mIOU   |       Download       |
-|:-------:|:------------------:|:----------------:|:--------:|:--------------------:|
-| VRWKV-T |        8.4M        |       16.6G      |   43.3   |  [ckpt](https://huggingface.co/OpenGVLab/Vision-RWKV/resolve/main/upernet_vrwkv_adapter_tiny_512_160k_ade20k.pth) \| [cfg](Vision-RWKV/segmentation/configs/ade20k/upernet_vrwkv_adapter_tiny_512_160k_ade20k.py) |
-| VRWKV-S |       29.3M        |       46.3G      |   47.2   |  [ckpt](https://huggingface.co/OpenGVLab/Vision-RWKV/resolve/main/upernet_vrwkv_adapter_small_512_160k_ade20k.pth) \| [cfg](Vision-RWKV/segmentation/configs/ade20k/upernet_vrwkv_adapter_small_512_160k_ade20k.py) |
-| VRWKV-B |      106.6M        |      146.0G      |   49.2   |  [ckpt](https://huggingface.co/OpenGVLab/Vision-RWKV/resolve/main/upernet_vrwkv_adapter_base_512_160k_ade20k.pth) \| [cfg](Vision-RWKV/segmentation/configs/ade20k/upernet_vrwkv_adapter_base_512_160k_ade20k.py) |
-| VRWKV-L |      351.9M        |      421.9G      |   53.5   | todo |
+- We report the \#Param and \#FLOPs of the backbone in this table.
+
+### Semantic Segmentation (ADE20K)
+
+|  Model  | #Param             | #FLOPs |   mIoU   |       Download       |
+| ------- | ------------------ | ---------------- | -------- | -------------------- |
+| VRWKV-T |        8.4M        |       16.6G      |   43.3   |  [ckpt](https://huggingface.co/OpenGVLab/Vision-RWKV/resolve/main/upernet_vrwkv_adapter_tiny_512_160k_ade20k.pth) \| [cfg](segmentation/configs/ade20k/upernet_vrwkv_adapter_tiny_512_160k_ade20k.py) |
+| VRWKV-S |       29.3M        |       46.3G      |   47.2   |  [ckpt](https://huggingface.co/OpenGVLab/Vision-RWKV/resolve/main/upernet_vrwkv_adapter_small_512_160k_ade20k.pth) \| [cfg](segmentation/configs/ade20k/upernet_vrwkv_adapter_small_512_160k_ade20k.py) |
+| VRWKV-B |      106.6M        |      146.0G      |   49.2   |  [ckpt](https://huggingface.co/OpenGVLab/Vision-RWKV/resolve/main/upernet_vrwkv_adapter_base_512_160k_ade20k.pth) \| [cfg](segmentation/configs/ade20k/upernet_vrwkv_adapter_base_512_160k_ade20k.py) |
+| VRWKV-L |      351.9M        |      421.9G      |   53.5   | TODO |
+
+- We report the \#Param and \#FLOPs of the backbone in this table.
+
 
 ## Citation
 If this work is helpful for your research, please consider citing the following BibTeX entry.
