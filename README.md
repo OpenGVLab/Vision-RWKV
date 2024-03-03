@@ -22,7 +22,7 @@ This paper introduces Vision-RWKV (VRWKV), a model adapted from the RWKV model u
 
 ## Model Zoo
 
-### Image Classification (ImageNet-1K)
+#### Image Classification (ImageNet-1K)
 
 |  Model  |   Size   | #Param | #FLOPs | Top-1 Acc |       Download       |
 | ------- | -------- | ------ | ----- | --------- | -------------------- |
@@ -31,7 +31,7 @@ This paper introduces Vision-RWKV (VRWKV), a model adapted from the RWKV model u
 | VRWKV-B |  224 |  93.7M | 18.2G |    82.0   | [ckpt](https://huggingface.co/OpenGVLab/Vision-RWKV/resolve/main/vrwkv_b_in1k_224.pth) \| [cfg](classification/configs/vrwkv/vrwkv_base_16xb64_in1k.py)  |
 | VRWKV-L |  384 | 334.9M | 189.5G |    85.3   | TODO |
 
-### Object Detection (COCO)
+#### Object Detection (COCO)
 
 |  Model  | ##Param | #FLOPs | box AP | mask AP |       Download       |
 | ------- | ------------------ | ---------------- | ------------ | ------------ | -------------------- |
@@ -42,7 +42,7 @@ This paper introduces Vision-RWKV (VRWKV), a model adapted from the RWKV model u
 
 - We report the \#Param and \#FLOPs of the backbone in this table.
 
-### Semantic Segmentation (ADE20K)
+#### Semantic Segmentation (ADE20K)
 
 |  Model  | #Param             | #FLOPs |   mIoU   |       Download       |
 | ------- | ------------------ | ---------------- | -------- | -------------------- |
