@@ -1,6 +1,9 @@
 # Vision-RWKV
 The official implementation of "Vision-RWKV: Efficient and Scalable Visual Perception with RWKV-Like".
 
+## News🚀🚀🚀
+- `2024/03/04`: We release the code and models of Vision RWKV.
+
 ## Abstract
 Transformers have revolutionized computer vision and natural language processing, but their high computational complexity limits their application in high-resolution image processing and long-context analysis. This paper introduces Vision-RWKV (VRWKV), a model adapted from the RWKV model used in the NLP field with necessary modifications for vision tasks. Similar to the Vision Transformer (ViT), our model is designed to efficiently handle sparse inputs and demonstrate robust global processing capabilities, while also scaling up effectively, accommodating both large-scale parameters and extensive datasets. Its distinctive advantage lies in its reduced spatial aggregation complexity, which renders it exceptionally adept at processing high-resolution images seamlessly, eliminating the necessity for windowing operations. Our evaluations in image classification demonstrate that VRWKV matches ViT's classification performance with significantly faster speeds and lower memory usage. In dense prediction tasks, it outperforms window-based models, maintaining comparable speeds. These results highlight VRWKV's potential as a more efficient alternative for advanced image analysis tasks.
 
@@ -10,6 +13,11 @@ Transformers have revolutionized computer vision and natural language processing
 ## Overview
 
 <img width="1238" alt="image" src="https://github.com/OpenGVLab/Vision-RWKV/assets/23737120/7521a3d6-6b5a-4a24-9ec8-dfb4abd3fd84">
+
+## Schedule
+
+- [ ] Release VRWKV-L
+- [x] Release VRWKV-T/S/B
 
 ## Model Zoo
 
@@ -43,7 +51,6 @@ Transformers have revolutionized computer vision and natural language processing
 | VRWKV-L |      351.9M        |      421.9G      |   53.5   | TODO |
 
 - We report the \#Param and \#FLOPs of the backbone in this table.
-
 
 ## Citation
 If this work is helpful for your research, please consider citing the following BibTeX entry.
