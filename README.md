@@ -54,6 +54,14 @@ Transformers have revolutionized computer vision and natural language processing
 
 ## Citation
 If this work is helpful for your research, please consider citing the following BibTeX entry.
+```BibTeX
+@article{duan2024vrwkv,
+  title={Vision-RWKV: Efficient and Scalable Visual Perception with RWKV-Like Architectures},
+  author={Duan, Yuchen and Wang, Weiyun and Chen, Zhe and Zhu, Xizhou and Lu, Lewei and Lu, Tong and Qiao, Yu and Li, Hongsheng and Dai, Jifeng and Wang, Wenhai
+  journal={arXiv preprint arXiv:TODO},
+  year={2024}
+}
+```
 
 ## License
 This repository is released under the Apache 2.0 license as found in the [LICENSE](LICENSE) file.
