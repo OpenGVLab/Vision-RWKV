@@ -1,12 +1,15 @@
 # Vision-RWKV
-The official implementation of "Vision-RWKV: Efficient and Scalable Visual Perception with RWKV-Like".
+The official implementation of "Vision-RWKV: Efficient and Scalable Visual Perception with RWKV-Like Architectures".
 
 ## News🚀🚀🚀
-- `2024/03/04`: We release the code and models of Vision RWKV.
+- `2024/03/04`: We release the code and models of Vision-RWKV.
 
-## Abstract
-Transformers have revolutionized computer vision and natural language processing, but their high computational complexity limits their application in high-resolution image processing and long-context analysis. 
-This paper introduces Vision-RWKV (VRWKV), a model adapted from the RWKV model used in the NLP field with necessary modifications for vision tasks. Similar to the Vision Transformer (ViT), our model is designed to efficiently handle sparse inputs and demonstrate robust global processing capabilities, while also scaling up effectively, accommodating both large-scale parameters and extensive datasets.  Its distinctive advantage lies in its reduced spatial aggregation complexity, which renders it exceptionally adept at processing high-resolution images seamlessly, eliminating the necessity for windowing operations. Our evaluations in image classification demonstrate that VRWKV matches ViT's classification performance with significantly faster speeds and lower memory usage. In dense prediction tasks, it outperforms window-based models, maintaining comparable speeds. These results highlight VRWKV's potential as a more efficient alternative for visual perception tasks.
+## Highlights
+
+- **High-Resolution Efficiency**: Processed high-resolution images smoothly with a global receptive field.
+- **Scalability**: Pre-trained with large-scale datasets and posses scale-up stablity.
+- **Superior Performance**: Achieved a better performance in classfication tasks than ViTs. Surpassed window-based ViTs and comparabled to global attention ViTs with lower flops and higher speed in dense prediction tasks.
+- **Efficient Alternative**: Capability to be an alternative backbone to ViT in comprehensive vision tasks.
 
 <img width="1238" alt="image" src="https://github.com/OpenGVLab/Vision-RWKV/assets/23737120/10965279-6542-4f82-aef5-934b8d86b345">
 
@@ -22,7 +25,7 @@ This paper introduces Vision-RWKV (VRWKV), a model adapted from the RWKV model u
 
 ## Model Zoo
 
-#### Image Classification (ImageNet-1K)
+### Image Classification (ImageNet-1K)
 
 |  Model  |   Size   | #Param | #FLOPs | Top-1 Acc |       Download       |
 | ------- | -------- | ------ | ----- | --------- | -------------------- |
@@ -31,9 +34,10 @@ This paper introduces Vision-RWKV (VRWKV), a model adapted from the RWKV model u
 | VRWKV-B |  224 |  93.7M | 18.2G |    82.0   | [ckpt](https://huggingface.co/OpenGVLab/Vision-RWKV/resolve/main/vrwkv_b_in1k_224.pth) \| [cfg](classification/configs/vrwkv/vrwkv_base_16xb64_in1k.py)  |
 | VRWKV-L |  384 | 334.9M | 189.5G |    85.3   | TODO |
 
-#### Object Detection (COCO)
+### Object Detection with Mask-RCNN head (COCO)
 
-|  Model  | ##Param | #FLOPs | box AP | mask AP |       Download       |
+
+|  Model  | #Param | #FLOPs | box AP | mask AP |       Download       |
 | ------- | ------------------ | ---------------- | ------------ | ------------ | -------------------- |
 | VRWKV-T |        8.4M        |       67.9G      |     41.7     |     38.0     |  [ckpt](https://huggingface.co/OpenGVLab/Vision-RWKV/resolve/main/mask_rcnn_vrwkv_adapter_tiny_fpn_1x_coco.pth) \| [cfg](detection/configs/mask_rcnn/mask_rcnn_vrwkv_adapter_tiny_fpn_1x_coco.py) |
 | VRWKV-S |       29.3M        |      189.9G      |     44.8     |     40.2     |  [ckpt](https://huggingface.co/OpenGVLab/Vision-RWKV/resolve/main/mask_rcnn_vrwkv_adapter_small_fpn_1x_coco.pth) \| [cfg](detection/configs/mask_rcnn/mask_rcnn_vrwkv_adapter_small_fpn_1x_coco.py) |
@@ -42,7 +46,8 @@ This paper introduces Vision-RWKV (VRWKV), a model adapted from the RWKV model u
 
 - We report the \#Param and \#FLOPs of the backbone in this table.
 
-#### Semantic Segmentation (ADE20K)
+### Semantic Segmentation with UperNet head (ADE20K)
+
 
 |  Model  | #Param             | #FLOPs |   mIoU   |       Download       |
 | ------- | ------------------ | ---------------- | -------- | -------------------- |
@@ -66,3 +71,7 @@ If this work is helpful for your research, please consider citing the following 
 
 ## License
 This repository is released under the Apache 2.0 license as found in the [LICENSE](LICENSE) file.
+
+## Acknowledgement
+
+Vision-RWKV is built with reference to the code of the following projects:  [RWKV](https://github.com/BlinkDL/RWKV-LM), [MMPretrain](https://github.com/open-mmlab/mmpretrain), [MMDetection](https://github.com/open-mmlab/mmdetection), [MMSegmentation](https://github.com/open-mmlab/mmsegmentation), [ViT-Adapter](https://github.com/czczup/ViT-Adapter), [InternImage](https://github.com/OpenGVLab/InternImage). Thanks for their awesome work!
