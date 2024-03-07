@@ -1,0 +1,58 @@
+DATA:
+  IMG_SIZE: 384
+  BATCH_SIZE: 128 # * 8 gpus
+  DATASET: 'imagenet'
+  DATA_PATH: 'data/imagenet/'
+  IMG_ON_MEMORY: False
+MODEL:
+  TYPE: 'vrwkv'
+  PRETRAINED: './pretrained/vrwkv_l_in22k_192.pth'  # https://huggingface.co/OpenGVLab/Vision-RWKV/resolve/main/vrwkv_l_in22k_192.pth
+  VRWKV:
+    IMG_SIZE: 192
+    PATCH_SIZE: 16
+    IN_CHANNELS: 3
+    OUT_INDICES: -1
+    DROP_RATE: 0.
+    EMBED_DIMS: 1024
+    DEPTH: 24
+    DROP_PATH_RATE: 0.1
+    CHANNEL_GAMMA: 0.25
+    SHIFT_PIXEL: 1
+    SHIFT_MODE: 'q_shift'
+    INIT_MODE: 'fancy'
+    POST_NORM: True
+    INIT_VALUES: 1e-5
+    HIDDEN_RATE: 4
+    FINAL_NORM: True
+    INTERPOLATE_MODE: 'bicubic'
+    HIDDEN_DIMS: 3072
+TRAIN:
+  EPOCHS: 20
+  WARMUP_EPOCHS: 2
+  WEIGHT_DECAY: 0.05
+  BASE_LR: 5.0e-6
+  WARMUP_LR: 5.0e-9
+  MIN_LR: 5.0e-8
+  CLIP_GRAD: 1.
+  ACCUMULATION_STEPS: 1
+  USE_CHECKPOINT: True
+  EMA:
+    ENABLE: True
+    DECAY: 0.9999
+  LR_SCHEDULER:
+    NAME: 'cosine'
+  LR_LAYER_DECAY: False
+  LR_LAYER_DECAY_RATIO: 1.
+AUG:
+  COLOR_JITTER: 0.
+  AUTO_AUGMENT: 'none'
+  REPROB: 0.
+  REMODE: 'pixel'
+  RECOUNT: 1
+  MIXUP: 0.8
+  CUTMIX: 1.0
+  CUTMIX_MINMAX: null
+  MIXUP_PROB: 0.5
+  MIXUP_SWITCH_PROB: 0.
+  MIXUP_MODE: 'batch'
+  RANDOM_RESIZED_CROP: True
