@@ -7,6 +7,8 @@ _base_ = [
 ]
 
 pretrained = 'pretrained/vrwkv_b_in1k_224.pth'
+# https://huggingface.co/OpenGVLab/Vision-RWKV/resolve/main/vrwkv_b_in1k_224.pth
+
 model = dict(
     pretrained=pretrained,
     backbone=dict(
