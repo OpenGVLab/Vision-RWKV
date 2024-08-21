@@ -5,3 +5,4 @@
 **/pretrained
 **/data
 segmentation/ops
+batchscript-*
