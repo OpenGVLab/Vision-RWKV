@@ -2,6 +2,7 @@
 The official implementation of "[Vision-RWKV: Efficient and Scalable Visual Perception with RWKV-Like Architectures](https://arxiv.org/abs/2403.02308)".
 
 ## News🚀🚀🚀
+- `2024/04/14`: We support rwkv6 in classification task, higher performance!
 - `2024/03/04`: We release the code and models of Vision-RWKV.
 
 ## Highlights
@@ -19,7 +20,7 @@ The official implementation of "[Vision-RWKV: Efficient and Scalable Visual Perc
 <img width="1238" alt="image" src="https://github.com/OpenGVLab/Vision-RWKV/assets/23737120/7521a3d6-6b5a-4a24-9ec8-dfb4abd3fd84">
 
 ## Schedule
-
+- [x] Support RWKV6 as VRWKV6
 - [x] Release VRWKV-L
 - [x] Release VRWKV-T/S/B
 
@@ -32,12 +33,15 @@ The official implementation of "[Vision-RWKV: Efficient and Scalable Visual Perc
 
 ### Image Classification (ImageNet-1K)
 
-|  Model  |   Size   | #Param | #FLOPs |  Top-1 Acc |       Download       |
-|:-------:|:--------:| ------:| ------:|:----------:|:--------------------:|
-| VRWKV-T |    224   |   6.2M |   1.2G |    75.1    | [ckpt](https://huggingface.co/OpenGVLab/Vision-RWKV/resolve/main/vrwkv_t_in1k_224.pth)    \| [cfg](classification/configs/vrwkv/vrwkv_tiny_8xb128_in1k.py)        |
-| VRWKV-S |    224   |  23.8M |   4.6G |    80.1    | [ckpt](https://huggingface.co/OpenGVLab/Vision-RWKV/resolve/main/vrwkv_s_in1k_224.pth)    \| [cfg](classification/configs/vrwkv/vrwkv_small_8xb128_in1k.py)       |
-| VRWKV-B |    224   |  93.7M |  18.2G |    82.0    | [ckpt](https://huggingface.co/OpenGVLab/Vision-RWKV/resolve/main/vrwkv_b_in1k_224.pth)    \| [cfg](classification/configs/vrwkv/vrwkv_base_16xb64_in1k.py)        |
-| VRWKV-L |    384   | 334.9M | 189.5G |    86.0    | [ckpt](https://huggingface.co/OpenGVLab/Vision-RWKV/resolve/main/vrwkv_l_22kto1k_384.pth) \| [cfg](classification_internimage/configs/vrwkv_l_22kto1k_384.yaml) |
+|  Model   |   Size   | #Param | #FLOPs |  Top-1 Acc |       Download       |
+|:--------:|:--------:| ------:| ------:|:----------:|:--------------------:|
+| VRWKV-T  |    224   |   6.2M |   1.2G |    75.1    | [ckpt](https://huggingface.co/OpenGVLab/Vision-RWKV/resolve/main/vrwkv_t_in1k_224.pth)    \| [cfg](classification/configs/vrwkv/vrwkv_tiny_8xb128_in1k.py)        |
+| VRWKV-S  |    224   |  23.8M |   4.6G |    80.1    | [ckpt](https://huggingface.co/OpenGVLab/Vision-RWKV/resolve/main/vrwkv_s_in1k_224.pth)    \| [cfg](classification/configs/vrwkv/vrwkv_small_8xb128_in1k.py)       |
+| VRWKV-B  |    224   |  93.7M |  18.2G |    82.0    | [ckpt](https://huggingface.co/OpenGVLab/Vision-RWKV/resolve/main/vrwkv_b_in1k_224.pth)    \| [cfg](classification/configs/vrwkv/vrwkv_base_16xb64_in1k.py)        |
+| VRWKV-L  |    384   | 334.9M | 189.5G |    86.0    | [ckpt](https://huggingface.co/OpenGVLab/Vision-RWKV/resolve/main/vrwkv_l_22kto1k_384.pth) \| [cfg](classification_internimage/configs/vrwkv_l_22kto1k_384.yaml) |
+| VRWKV6-T |    224   |   7.6M |   1.6G |    76.6    | [ckpt](https://huggingface.co/OpenGVLab/Vision-RWKV/resolve/main/vrwkv6_t_in1k_224.pth)    \| [cfg](classification/configs/vrwkv6/vrwkv6_tiny_8xb128_in1k.py)        |
+| VRWKV6-S |    224   |  27.7M |   5.6G |    81.1    | [ckpt](https://huggingface.co/OpenGVLab/Vision-RWKV/resolve/main/vrwkv6_s_in1k_224.pth)    \| [cfg](classification/configs/vrwkv6/vrwkv6_small_8xb128_in1k.py)       |
+| VRWKV6-B |    224   | 104.9M |  20.9G |    82.6    | [ckpt](https://huggingface.co/OpenGVLab/Vision-RWKV/resolve/main/vrwkv6_b_in1k_224.pth)    \| [cfg](classification/configs/vrwkv6/vrwkv6_base_16xb64_in1k.py)        |
 
 - VRWKV-L is pretrained on ImageNet-22K and then finetuned on ImageNet-1K.
 - We train VRWKV-L with the internimage codebase for a higher speed.
