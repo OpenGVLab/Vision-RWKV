@@ -2,6 +2,8 @@
 The official implementation of "[Vision-RWKV: Efficient and Scalable Visual Perception with RWKV-Like Architectures](https://arxiv.org/abs/2403.02308)".
 
 ## News🚀🚀🚀
+- `2025/02/18`: A new version of the CUDA code has been added in the `cuda_new` folder to eliminate the hardcoding of `T_MAX`.
+- `2025/02/11`: 🎊🎊 Vison-RWKV is accepted by ICLR 2025!
 - `2024/04/14`: We support rwkv6 in classification task, higher performance!
 - `2024/03/04`: We release the code and models of Vision-RWKV.
 
